@@ -1,0 +1,352 @@
+﻿[
+  {
+    "Id": 1,
+    "Title": "Inception",
+    "Director": "Christopher Nolan",
+    "Genre": "ScienceFiction",
+    "ReleaseDate": "2010-07-16"
+  },
+  {
+    "Id": 2,
+    "Title": "The Dark Knight",
+    "Director": "Christopher Nolan",
+    "Genre": "Action",
+    "ReleaseDate": "2008-07-18"
+  },
+  {
+    "Id": 3,
+    "Title": "Parasite",
+    "Director": "Bong Joon-ho",
+    "Genre": "Thriller",
+    "ReleaseDate": "2019-05-30"
+  },
+  {
+    "Id": 4,
+    "Title": "Forrest Gump",
+    "Director": "Robert Zemeckis",
+    "Genre": "Drama",
+    "ReleaseDate": "1994-07-06"
+  },
+  {
+    "Id": 5,
+    "Title": "Toy Story",
+    "Director": "John Lasseter",
+    "Genre": "Animation",
+    "ReleaseDate": "1995-11-22"
+  },
+  {
+    "Id": 6,
+    "Title": "Get Out",
+    "Director": "Jordan Peele",
+    "Genre": "Horror",
+    "ReleaseDate": "2017-02-24"
+  },
+  {
+    "Id": 7,
+    "Title": "The Matrix",
+    "Director": "Lana Wachowski, Lilly Wachowski",
+    "Genre": "ScienceFiction",
+    "ReleaseDate": "1999-03-31"
+  },
+  {
+    "Id": 8,
+    "Title": "Pulp Fiction",
+    "Director": "Quentin Tarantino",
+    "Genre": "Comedy",
+    "ReleaseDate": "1994-10-14"
+  },
+  {
+    "Id": 9,
+    "Title": "The Godfather",
+    "Director": "Francis Ford Coppola",
+    "Genre": "Drama",
+    "ReleaseDate": "1972-03-24"
+  },
+  {
+    "Id": 10,
+    "Title": "The Conjuring",
+    "Director": "James Wan",
+    "Genre": "Horror",
+    "ReleaseDate": "2013-07-19"
+  },
+  {
+    "Id": 11,
+    "Title": "Titanic",
+    "Director": "James Cameron",
+    "Genre": "Romance",
+    "ReleaseDate": "1997-12-19"
+  },
+  {
+    "Id": 12,
+    "Title": "Mad Max: Fury Road",
+    "Director": "George Miller",
+    "Genre": "Action",
+    "ReleaseDate": "2015-05-15"
+  },
+  {
+    "Id": 13,
+    "Title": "Spirited Away",
+    "Director": "Hayao Miyazaki",
+    "Genre": "Animation",
+    "ReleaseDate": "2001-07-20"
+  },
+  {
+    "Id": 14,
+    "Title": "The Social Dilemma",
+    "Director": "Jeff Orlowski",
+    "Genre": "Documentary",
+    "ReleaseDate": "2020-01-26"
+  },
+  {
+    "Id": 15,
+    "Title": "Her",
+    "Director": "Spike Jonze",
+    "Genre": "Romance",
+    "ReleaseDate": "2013-12-18"
+  },
+  {
+    "Id": 16,
+    "Title": "John Wick",
+    "Director": "Chad Stahelski",
+    "Genre": "Action",
+    "ReleaseDate": "2014-10-24"
+  },
+  {
+    "Id": 17,
+    "Title": "A Quiet Place",
+    "Director": "John Krasinski",
+    "Genre": "Horror",
+    "ReleaseDate": "2018-04-06"
+  },
+  {
+    "Id": 18,
+    "Title": "Inside Out",
+    "Director": "Pete Docter",
+    "Genre": "Animation",
+    "ReleaseDate": "2015-06-19"
+  },
+  {
+    "Id": 19,
+    "Title": "Joker",
+    "Director": "Todd Phillips",
+    "Genre": "Drama",
+    "ReleaseDate": "2019-10-04"
+  },
+  {
+    "Id": 20,
+    "Title": "Black Panther",
+    "Director": "Ryan Coogler",
+    "Genre": "Action",
+    "ReleaseDate": "2018-02-16"
+  },
+  {
+    "Id": 21,
+    "Title": "The Shape of Water",
+    "Director": "Guillermo del Toro",
+    "Genre": "Romance",
+    "ReleaseDate": "2017-12-01"
+  },
+  {
+    "Id": 22,
+    "Title": "The Irishman",
+    "Director": "Martin Scorsese",
+    "Genre": "Drama",
+    "ReleaseDate": "2019-09-27"
+  },
+  {
+    "Id": 23,
+    "Title": "Interstellar",
+    "Director": "Christopher Nolan",
+    "Genre": "ScienceFiction",
+    "ReleaseDate": "2014-11-07"
+  },
+  {
+    "Id": 24,
+    "Title": "Logan",
+    "Director": "James Mangold",
+    "Genre": "Action",
+    "ReleaseDate": "2017-03-03"
+  },
+  {
+    "Id": 25,
+    "Title": "Guardians of the Galaxy",
+    "Director": "James Gunn",
+    "Genre": "ScienceFiction",
+    "ReleaseDate": "2014-08-01"
+  },
+  {
+    "Id": 26,
+    "Title": "The Wolf of Wall Street",
+    "Director": "Martin Scorsese",
+    "Genre": "Comedy",
+    "ReleaseDate": "2013-12-25"
+  },
+  {
+    "Id": 27,
+    "Title": "Coco",
+    "Director": "Lee Unkrich",
+    "Genre": "Animation",
+    "ReleaseDate": "2017-11-22"
+  },
+  {
+    "Id": 28,
+    "Title": "La La Land",
+    "Director": "Damien Chazelle",
+    "Genre": "Romance",
+    "ReleaseDate": "2016-12-09"
+  },
+  {
+    "Id": 29,
+    "Title": "The Revenant",
+    "Director": "Alejandro G. Iñárritu",
+    "Genre": "Action",
+    "ReleaseDate": "2015-12-25"
+  },
+  {
+    "Id": 30,
+    "Title": "A Star is Born",
+    "Director": "Bradley Cooper",
+    "Genre": "Drama",
+    "ReleaseDate": "2018-10-05"
+  },
+  {
+    "Id": 31,
+    "Title": "Shutter Island",
+    "Director": "Martin Scorsese",
+    "Genre": "Thriller",
+    "ReleaseDate": "2010-02-19"
+  },
+  {
+    "Id": 32,
+    "Title": "Finding Nemo",
+    "Director": "Andrew Stanton",
+    "Genre": "Animation",
+    "ReleaseDate": "2003-05-30"
+  },
+  {
+    "Id": 33,
+    "Title": "Ex Machina",
+    "Director": "Alex Garland",
+    "Genre": "ScienceFiction",
+    "ReleaseDate": "2015-01-21"
+  },
+  {
+    "Id": 34,
+    "Title": "The Grand Budapest Hotel",
+    "Director": "Wes Anderson",
+    "Genre": "Comedy",
+    "ReleaseDate": "2014-03-28"
+  },
+  {
+    "Id": 35,
+    "Title": "Zodiac",
+    "Director": "David Fincher",
+    "Genre": "Thriller",
+    "ReleaseDate": "2007-03-02"
+  },
+  {
+    "Id": 36,
+    "Title": "The Big Short",
+    "Director": "Adam McKay",
+    "Genre": "Comedy",
+    "ReleaseDate": "2015-12-11"
+  },
+  {
+    "Id": 37,
+    "Title": "Moonlight",
+    "Director": "Barry Jenkins",
+    "Genre": "Drama",
+    "ReleaseDate": "2016-10-21"
+  },
+  {
+    "Id": 38,
+    "Title": "Dunkirk",
+    "Director": "Christopher Nolan",
+    "Genre": "Action",
+    "ReleaseDate": "2017-07-21"
+  },
+  {
+    "Id": 39,
+    "Title": "Alien",
+    "Director": "Ridley Scott",
+    "Genre": "ScienceFiction",
+    "ReleaseDate": "1979-05-25"
+  },
+  {
+    "Id": 40,
+    "Title": "Whiplash",
+    "Director": "Damien Chazelle",
+    "Genre": "Drama",
+    "ReleaseDate": "2014-10-10"
+  },
+  {
+    "Id": 41,
+    "Title": "Avengers: Endgame",
+    "Director": "Anthony Russo, Joe Russo",
+    "Genre": "Action",
+    "ReleaseDate": "2019-04-26"
+  },
+  {
+    "Id": 42,
+    "Title": "Borat",
+    "Director": "Larry Charles",
+    "Genre": "Comedy",
+    "ReleaseDate": "2006-11-03"
+  },
+  {
+    "Id": 43,
+    "Title": "The Lighthouse",
+    "Director": "Robert Eggers",
+    "Genre": "Thriller",
+    "ReleaseDate": "2019-10-18"
+  },
+  {
+    "Id": 44,
+    "Title": "The Invisible Man",
+    "Director": "Leigh Whannell",
+    "Genre": "Horror",
+    "ReleaseDate": "2020-02-28"
+  },
+  {
+    "Id": 45,
+    "Title": "Blade Runner 2049",
+    "Director": "Denis Villeneuve",
+    "Genre": "ScienceFiction",
+    "ReleaseDate": "2017-10-06"
+  },
+  {
+    "Id": 46,
+    "Title": "Marriage Story",
+    "Director": "Noah Baumbach",
+    "Genre": "Drama",
+    "ReleaseDate": "2019-12-06"
+  },
+  {
+    "Id": 47,
+    "Title": "Arrival",
+    "Director": "Denis Villeneuve",
+    "Genre": "ScienceFiction",
+    "ReleaseDate": "2016-11-11"
+  },
+  {
+    "Id": 48,
+    "Title": "The Truman Show",
+    "Director": "Peter Weir",
+    "Genre": "Comedy",
+    "ReleaseDate": "1998-06-05"
+  },
+  {
+    "Id": 49,
+    "Title": "Jojo Rabbit",
+    "Director": "Taika Waititi",
+    "Genre": "Comedy",
+    "ReleaseDate": "2019-10-18"
+  },
+  {
+    "Id": 50,
+    "Title": "The Last Dance",
+    "Director": "Jason Hehir",
+    "Genre": "Documentary",
+    "ReleaseDate": "2020-04-19"
+  }
+]
