@@ -40,7 +40,7 @@ namespace ComputerWorkshop1.Storage
 
             return true;
         }
-        public void Delete(int Id) => data.RemoveAll(x => x.Id == Id);
+        public int Delete(int Id) => data.RemoveAll(x => x.Id == Id);
 
         public void SaveData() => jsonFileService.SaveData(data);
     }
