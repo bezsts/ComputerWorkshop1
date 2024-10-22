@@ -1,0 +1,107 @@
+[
+  {
+    "Id": 1,
+    "Name": "John Doe",
+    "Email": "john.doe@example.com",
+    "Password": "password123",
+    "WatchedMovies": [ 1, 12 ]
+  },
+  {
+    "Id": 2,
+    "Name": "Jane Smith",
+    "Email": "jane.smith@example.com",
+    "Password": "qwerty789",
+    "WatchedMovies": [ 5, 18, 27 ]
+  },
+  {
+    "Id": 3,
+    "Name": "Alice Johnson",
+    "Email": "alice.johnson@example.com",
+    "Password": "alice2021",
+    "WatchedMovies": [ 16, 29 ]
+  },
+  {
+    "Id": 4,
+    "Name": "Bob Williams",
+    "Email": "bob.williams@example.com",
+    "Password": "bobw99",
+    "WatchedMovies": [ 2, 19 ]
+  },
+  {
+    "Id": 5,
+    "Name": "Charlie Brown",
+    "Email": "charlie.brown@example.com",
+    "Password": "charliePass",
+    "WatchedMovies": [ 4, 30 ]
+  },
+  {
+    "Id": 6,
+    "Name": "David Clark",
+    "Email": "david.clark@example.com",
+    "Password": "david2020",
+    "WatchedMovies": [ 25, 45 ]
+  },
+  {
+    "Id": 7,
+    "Name": "Emma Harris",
+    "Email": "emma.harris@example.com",
+    "Password": "emma#789",
+    "WatchedMovies": [ 28, 11 ]
+  },
+  {
+    "Id": 8,
+    "Name": "Frank Lee",
+    "Email": "frank.lee@example.com",
+    "Password": "frank_lee2022",
+    "WatchedMovies": [ 6, 43 ]
+  },
+  {
+    "Id": 9,
+    "Name": "Grace Martin",
+    "Email": "grace.martin@example.com",
+    "Password": "grace1234",
+    "WatchedMovies": [ 7, 23 ]
+  },
+  {
+    "Id": 10,
+    "Name": "Hannah Moore",
+    "Email": "hannah.moore@example.com",
+    "Password": "hannahpass!",
+    "WatchedMovies": [ 26, 35 ]
+  },
+  {
+    "Id": 11,
+    "Name": "Isaac Miller",
+    "Email": "isaac.miller@example.com",
+    "Password": "isaac2023",
+    "WatchedMovies": [ 31, 38 ]
+  },
+  {
+    "Id": 12,
+    "Name": "Jack Wilson",
+    "Email": "jack.wilson@example.com",
+    "Password": "jack_safe2024",
+    "WatchedMovies": [ 13, 32 ]
+  },
+  {
+    "Id": 13,
+    "Name": "Kelly Davis",
+    "Email": "kelly.davis@example.com",
+    "Password": "kelly!secure",
+    "WatchedMovies": [ 15, 37 ]
+  },
+  {
+    "Id": 14,
+    "Name": "Liam Anderson",
+    "Email": "liam.anderson@example.com",
+    "Password": "liamPass777",
+    "WatchedMovies": [ 41, 24 ]
+  },
+  {
+    "Id": 15,
+    "Name": "Mia Thomas",
+    "Email": "mia.thomas@example.com",
+    "Password": "miaThom123",
+    "WatchedMovies": [ 8, 42 ]
+  }
+]
