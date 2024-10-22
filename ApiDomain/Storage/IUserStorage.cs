@@ -6,7 +6,7 @@ namespace ApiDomain.Storage
     {
         IEnumerable<User> GetAll();
         User? Get(int Id);
-        User Add(User user);
+        User Create(User user);
         bool Update(int id, User updatedUser);
         int Delete(int Id);
     }

@@ -17,7 +17,7 @@ namespace ApiDomain.Storage
 
         public Movie? Get(int id) => data.Find(x => x.Id == id);
 
-        public Movie Add(Movie movie)
+        public Movie Create(Movie movie)
         {
             movie.Id = data.Any() ? data.Max(x => x.Id) + 1 : 1;
             data.Add(movie);

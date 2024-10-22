@@ -6,7 +6,7 @@ namespace ApiDomain.Storage
     {
         IEnumerable<Movie> GetAll();
         Movie? Get(int id);
-        Movie Add(Movie movie);
+        Movie Create(Movie movie);
         bool Update(int id, Movie updatedMovie);
         int Delete(int id);
     }

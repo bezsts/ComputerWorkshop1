@@ -17,7 +17,7 @@ namespace ApiDomain.Storage
 
         public User? Get(int Id) => data.Find(x => x.Id == Id);
 
-        public User Add(User user)
+        public User Create(User user)
         {
             user.Id = data.Any() ? data.Max(x => x.Id) + 1 : 1;
             data.Add(user);
