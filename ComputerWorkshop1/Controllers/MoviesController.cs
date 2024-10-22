@@ -1,5 +1,5 @@
 ﻿using ApiDomain.Models;
-using ApiDomain.Storage;
+using ApiDomain.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Controllers
@@ -9,9 +9,9 @@ namespace WebApp.Controllers
     [Produces("application/json")]
     public class MoviesController : Controller
     {
-        private readonly IMovieStorage storage;
+        private readonly IMovieService storage;
 
-        public MoviesController(IMovieStorage storage) => this.storage = storage;
+        public MoviesController(IMovieService storage) => this.storage = storage;
 
         /// <summary>
         /// Retrieves all movies.
@@ -68,6 +68,6 @@ namespace WebApp.Controllers
         /// <response code="204">The movie is successfully deleted.</response>
         /// <response code="404">The movie is not found.</response>
         [HttpDelete("{id}")]
-        public IActionResult DeleteMovie(int id) => storage.Delete(id) == 0 ? NotFound() : NoContent();
+        public IActionResult DeleteMovie(int id) => storage.Delete(id) ? NotFound() : NoContent();
     }
 }

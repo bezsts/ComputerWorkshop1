@@ -1,5 +1,5 @@
 ﻿using ApiDomain.Models;
-using ApiDomain.Storage;
+using ApiDomain.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Controllers
@@ -9,9 +9,9 @@ namespace WebApp.Controllers
     [Produces("application/json")]
     public class UsersController : Controller
     {
-        private readonly IUserStorage storage;
+        private readonly IUserService storage;
 
-        public UsersController(IUserStorage storage) => this.storage = storage;
+        public UsersController(IUserService storage) => this.storage = storage;
 
         /// <summary>
         /// Retrieves all users.
@@ -68,6 +68,6 @@ namespace WebApp.Controllers
         /// <response code="204">The user is successfully deleted.</response>
         /// <response code="404">The user is not found.</response>
         [HttpDelete]
-        public IActionResult DeleteUser(int id) => storage.Delete(id) == 0 ? NotFound() : NoContent();
+        public IActionResult DeleteUser(int id) => storage.Delete(id) ? NotFound() : NoContent();
     }
 }

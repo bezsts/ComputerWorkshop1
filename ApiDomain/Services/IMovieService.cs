@@ -1,13 +1,13 @@
 ﻿using ApiDomain.Models;
 
-namespace ApiDomain.Storage
+namespace ApiDomain.Services
 {
-    public interface IMovieStorage
+    public interface IMovieService
     {
         IEnumerable<Movie> GetAll();
         Movie? Get(int id);
         Movie Create(Movie movie);
         bool Update(int id, Movie updatedMovie);
-        int Delete(int id);
+        bool Delete(int id);
     }
 }
