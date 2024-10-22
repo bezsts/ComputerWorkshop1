@@ -12,6 +12,7 @@ namespace ComputerWorkshop1
 
             builder.Services.AddControllers();
             builder.Services.AddUser();
+            builder.Services.AddMovie();
             builder.Services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new OpenApiInfo
