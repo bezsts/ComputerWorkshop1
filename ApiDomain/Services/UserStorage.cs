@@ -20,7 +20,7 @@ namespace ApiDomain.Services
         {
             user.Id = data.Any() ? data.Max(x => x.Id) + 1 : 1;
             data.Add(user);
-
+            SaveData();
             return user;
         }
 
@@ -37,10 +37,15 @@ namespace ApiDomain.Services
             data[userIndex].Email = updatedUser.Email;
             data[userIndex].Password = updatedUser.Password;
             data[userIndex].WatchedMovies = updatedUser.WatchedMovies;
-
+            SaveData();
             return true;
         }
-        public int Delete(int Id) => data.RemoveAll(x => x.Id == Id);
+        public int Delete(int Id) 
+        {
+            int number = data.RemoveAll(x => x.Id == Id);
+            SaveData();
+            return number;
+        } 
 
         public void SaveData() => jsonFileService.SaveData(data);
     }
