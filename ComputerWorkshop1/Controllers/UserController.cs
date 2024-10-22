@@ -28,10 +28,10 @@ namespace WebApp.Controllers
         /// <returns>User</returns>
         /// <response code="200">Returns the user.</response>
         /// <response code="404">The user is not found.</response>
-        [HttpGet("{id}",  Name = "GetUserById")]
+        [HttpGet("{id}", Name = "GetUserById")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
         public IActionResult Get(int id)
-        { 
+        {
             var user = storage.Get(id);
             return user != null ? Ok(user) : NotFound();
         }
@@ -45,7 +45,7 @@ namespace WebApp.Controllers
         /// <response code="400">The user data is invalid.</response>
         [HttpPost(Name = "AddUser")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Post))]
-        public IActionResult Post(User user) => CreatedAtAction(nameof(Get), new { id = user.Id}, storage.Add(user));
+        public IActionResult Post(User user) => CreatedAtAction(nameof(Get), new { id = user.Id }, storage.Add(user));
 
         /// <summary>
         /// Updates an existing user by id and new user data

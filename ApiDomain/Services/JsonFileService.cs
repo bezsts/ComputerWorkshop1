@@ -1,5 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace ApiDomain.Services
 {
@@ -15,16 +14,17 @@ namespace ApiDomain.Services
         public List<T> LoadData()
         {
             if (!File.Exists(_filePath))
-            { 
+            {
                 return new List<T>();
             }
 
-            var json = File.ReadAllText(_filePath);
-            return JsonConvert.DeserializeObject<List<T>>(json);
+            var jsonText = File.ReadAllText(_filePath);
+            var jsonList = JsonConvert.DeserializeObject<List<T>>(jsonText);
+            return jsonList == null ? new List<T>() : jsonList;
         }
 
-        public void SaveData(List<T> data) 
-        { 
+        public void SaveData(List<T> data)
+        {
             var json = JsonConvert.SerializeObject(data);
             File.WriteAllText(_filePath, json);
         }
