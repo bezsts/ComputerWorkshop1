@@ -1,5 +1,5 @@
 ﻿using ApiDomain.Models;
-using ApiDomain.Services;
+using ApiDomain.Storage;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Controllers
@@ -9,9 +9,9 @@ namespace WebApp.Controllers
     [Produces("application/json")]
     public class MovieController : Controller
     {
-        private readonly MovieStorage storage;
+        private readonly IMovieStorage storage;
 
-        public MovieController(MovieStorage storage)
+        public MovieController(IMovieStorage storage)
         {
             this.storage = storage;
         }

@@ -1,5 +1,5 @@
 ﻿using ApiDomain.Models;
-using ApiDomain.Services;
+using ApiDomain.Storage;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Controllers
@@ -9,9 +9,9 @@ namespace WebApp.Controllers
     [Produces("application/json")]
     public class UserController : Controller
     {
-        private readonly UserStorage storage;
+        private readonly IUserStorage storage;
 
-        public UserController(UserStorage storage) => this.storage = storage;
+        public UserController(IUserStorage storage) => this.storage = storage;
 
         /// <summary>
         /// Returns all users

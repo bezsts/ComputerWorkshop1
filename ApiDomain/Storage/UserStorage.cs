@@ -1,13 +1,14 @@
 ﻿using ApiDomain.Models;
+using ApiDomain.Services;
 
-namespace ApiDomain.Services
+namespace ApiDomain.Storage
 {
-    public class UserStorage
+    internal class UserStorage : IUserStorage
     {
         private readonly JsonFileService<User> jsonFileService = new JsonFileService<User>("Data/users.json");
         private readonly List<User> data = [];
 
-        public UserStorage() 
+        public UserStorage()
         {
             data = jsonFileService.LoadData();
         }
@@ -25,7 +26,7 @@ namespace ApiDomain.Services
         }
 
         public bool Update(int id, User updatedUser)
-        { 
+        {
             var userIndex = data.FindIndex(x => x.Id == id);
 
             if (userIndex == -1)
@@ -40,13 +41,13 @@ namespace ApiDomain.Services
             SaveData();
             return true;
         }
-        public int Delete(int Id) 
+        public int Delete(int Id)
         {
             int number = data.RemoveAll(x => x.Id == Id);
             SaveData();
             return number;
-        } 
+        }
 
-        public void SaveData() => jsonFileService.SaveData(data);
+        private void SaveData() => jsonFileService.SaveData(data);
     }
 }

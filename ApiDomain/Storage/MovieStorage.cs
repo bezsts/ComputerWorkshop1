@@ -1,14 +1,15 @@
 ﻿using ApiDomain.Models;
+using ApiDomain.Services;
 
-namespace ApiDomain.Services
+namespace ApiDomain.Storage
 {
-    public class MovieStorage
+    internal class MovieStorage : IMovieStorage
     {
         private readonly JsonFileService<Movie> jsonFileService = new JsonFileService<Movie>("Data/movies.json");
         private List<Movie> data = [];
 
-        public MovieStorage() 
-        { 
+        public MovieStorage()
+        {
             data = jsonFileService.LoadData();
         }
 
@@ -25,7 +26,7 @@ namespace ApiDomain.Services
         }
 
         public bool Update(int id, Movie updatedMovie)
-        { 
+        {
             var movieIndex = data.FindIndex(x => x.Id == id);
 
             if (movieIndex == -1)
@@ -42,12 +43,12 @@ namespace ApiDomain.Services
         }
 
         public int Delete(int id)
-        { 
+        {
             int number = data.RemoveAll(x => x.Id == id);
             SaveData();
             return number;
-        } 
+        }
 
-        public void SaveData() => jsonFileService.SaveData(data);
+        private void SaveData() => jsonFileService.SaveData(data);
     }
 }
