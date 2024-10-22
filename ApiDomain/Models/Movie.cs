@@ -1,4 +1,4 @@
-﻿namespace ComputerWorkshop1.Models
+﻿namespace ApiDomain.Models
 {
     public class Movie
     {

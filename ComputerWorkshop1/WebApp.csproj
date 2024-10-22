@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
+    <ProjectReference Include="..\ApiDomain\ApiDomain.csproj" />
   </ItemGroup>
 
 </Project>

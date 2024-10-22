@@ -1,6 +1,6 @@
-﻿using ComputerWorkshop1.Models;
+﻿using ApiDomain.Models;
 
-namespace ComputerWorkshop1.Storage
+namespace ApiDomain.Services
 {
     public class MovieStorage
     {

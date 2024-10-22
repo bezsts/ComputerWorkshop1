@@ -1,3 +1,4 @@
+using ComputerWorkshop1.Storage;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 
@@ -10,6 +11,7 @@ namespace ComputerWorkshop1
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllers();
+            builder.Services.AddUser();
             builder.Services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new OpenApiInfo

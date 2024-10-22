@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 
-namespace ComputerWorkshop1.Storage
+namespace ApiDomain.Services
 {
     public class JsonFileService<T> where T : class
     {
