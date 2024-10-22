@@ -7,21 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Data\movies.json" />
-    <None Remove="Data\users.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Data\movies.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Include="Data\users.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+    <Compile Remove="Data\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="Data\**" />
   </ItemGroup>
 
   <ItemGroup>
