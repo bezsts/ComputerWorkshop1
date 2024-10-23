@@ -1,5 +1,5 @@
-﻿using ApiDomain.Storage;
-using ApiDomain.Models;
+﻿using ApiDomain.Models;
+using ApiDomain.Storage;
 
 namespace ApiDomain.Services
 {
@@ -42,6 +42,25 @@ namespace ApiDomain.Services
             int number = dataStorage.Users.RemoveAll(x => x.Id == Id);
             dataStorage.SaveUsersData();
             return number != 0;
+        }
+
+        public MovieStatistics? GetMovieStatistics(int userId)
+        {
+            User? user = Get(userId);
+
+            if (user is null)
+            {
+                return null;
+            }
+
+            int totalWatchedMovies = user.WatchedMovies.Count;
+
+            var watchedMovies = dataStorage.Movies.Where(m => user.WatchedMovies.Contains(m.Id)).ToList();
+
+            var watchedGenres = watchedMovies.GroupBy(m => m.Genre)
+                .ToDictionary(g => g.Key, g => g.Count());
+
+            return new MovieStatistics(totalWatchedMovies, watchedGenres);
         }
     }
 }

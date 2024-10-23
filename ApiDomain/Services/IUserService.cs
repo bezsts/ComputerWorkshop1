@@ -9,8 +9,6 @@ namespace ApiDomain.Services
         User Create(User user);
         bool Update(int id, User updatedUser);
         bool Delete(int Id);
-        //bool AddWatchedMovieToUser(int userId, int movieId);
-        //Movie GetMovieRecommendation(int userId);
-        //MovieStatistics GetMovieStatistics(int userId);
+        MovieStatistics? GetMovieStatistics(int userId);
     }
 }

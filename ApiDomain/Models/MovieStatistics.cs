@@ -9,6 +9,12 @@ namespace ApiDomain.Models
     public class MovieStatistics
     {
         public int TotalMovies { get; set; }
-        public Dictionary<Genre, int> MoviesByGenre { get; set; } = new Dictionary<Genre, int>();
+        public Dictionary<Genre, int> MoviesByGenre { get; set; }
+
+        public MovieStatistics(int watchedMovies, Dictionary<Genre, int> moviesByGenre) 
+        {
+            TotalMovies = watchedMovies;
+            MoviesByGenre = moviesByGenre;
+        }
     }
 }

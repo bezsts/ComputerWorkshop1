@@ -69,5 +69,12 @@ namespace WebApp.Controllers
         /// <response code="404">The user is not found.</response>
         [HttpDelete]
         public IActionResult DeleteUser(int id) => storage.Delete(id) ? NotFound() : NoContent();
+
+        [HttpGet("{id}/statistics")]
+        public IActionResult GetStatistics(int id) 
+        {
+            var statistics = storage.GetMovieStatistics(id);
+            return statistics != null ? Ok(statistics) : NotFound();
+        } 
     }
 }
