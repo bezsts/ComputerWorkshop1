@@ -70,6 +70,13 @@ namespace WebApp.Controllers
         [HttpDelete]
         public IActionResult DeleteUser(int id) => storage.Delete(id) ? NotFound() : NoContent();
 
+        /// <summary>
+        /// Retrieves the statistics of watched movies for a user by the specified identifier.
+        /// </summary>
+        /// <param name="id">The ID of the user whose watched movies statistics are being retrieved.</param>
+        /// <returns>The statistics of watched movies for a user with specified ID.</returns>
+        /// <response code="200">Returns the statistics of watched movies for a user with specified ID.</response>
+        /// <response code="404">The user is not found.</response>
         [HttpGet("{id}/statistics")]
         public IActionResult GetStatistics(int id) 
         {
