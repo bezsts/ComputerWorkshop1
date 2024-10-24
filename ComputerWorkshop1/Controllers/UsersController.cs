@@ -9,9 +9,9 @@ namespace WebApp.Controllers
     [Produces("application/json")]
     public class UsersController : Controller
     {
-        private readonly IUserService storage;
+        private readonly IUserService _service;
 
-        public UsersController(IUserService storage) => this.storage = storage;
+        public UsersController(IUserService service) => this._service = service;
 
         /// <summary>
         /// Retrieves all users.
@@ -19,7 +19,7 @@ namespace WebApp.Controllers
         /// <returns>All Users.</returns>
         /// <response code="200">Returns all Users.</response>
         [HttpGet]
-        public IEnumerable<User> GetAllUsers() => storage.GetAll();
+        public IEnumerable<User> GetAllUsers() => _service.GetAll();
 
         /// <summary>
         /// Get a specific user by ID.
@@ -31,7 +31,7 @@ namespace WebApp.Controllers
         [HttpGet("{id}")]
         public IActionResult GetUser(int id)
         {
-            var user = storage.Get(id);
+            var user = _service.Get(id);
             return user != null ? Ok(user) : NotFound();
         }
 
@@ -43,7 +43,7 @@ namespace WebApp.Controllers
         /// <response code="201">The user is successfully added.</response>
         /// <response code="400">The user data is invalid.</response>
         [HttpPost]
-        public IActionResult CreateUser(User user) => CreatedAtAction(nameof(GetUser), new { id = user.Id }, storage.Create(user));
+        public IActionResult CreateUser(User user) => CreatedAtAction(nameof(GetUser), new { id = user.Id }, _service.Create(user));
 
         /// <summary>
         /// Updates an existing user.
@@ -56,7 +56,7 @@ namespace WebApp.Controllers
         [HttpPut("{id}")]
         public IActionResult UpdateUser(int id, User updatedUser)
         {
-            var result = storage.Update(id, updatedUser);
+            var result = _service.Update(id, updatedUser);
             return result ? Ok(result) : NotFound();
         }
 
@@ -67,8 +67,8 @@ namespace WebApp.Controllers
         /// <returns>An IActionResult indicating the result of the operation.</returns>
         /// <response code="204">The user is successfully deleted.</response>
         /// <response code="404">The user is not found.</response>
-        [HttpDelete]
-        public IActionResult DeleteUser(int id) => storage.Delete(id) ? NotFound() : NoContent();
+        [HttpDelete("{id}")]
+        public IActionResult DeleteUser(int id) => _service.Delete(id) ? NoContent() : NotFound();
 
         /// <summary>
         /// Retrieves the statistics of watched movies for a user by the specified identifier.
@@ -80,7 +80,7 @@ namespace WebApp.Controllers
         [HttpGet("{id}/statistics")]
         public IActionResult GetStatistics(int id) 
         {
-            var statistics = storage.GetMovieStatistics(id);
+            var statistics = _service.GetMovieStatistics(id);
             return statistics != null ? Ok(statistics) : NotFound();
         } 
     }

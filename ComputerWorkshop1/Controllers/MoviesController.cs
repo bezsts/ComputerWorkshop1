@@ -9,9 +9,9 @@ namespace WebApp.Controllers
     [Produces("application/json")]
     public class MoviesController : Controller
     {
-        private readonly IMovieService storage;
+        private readonly IMovieService _service;
 
-        public MoviesController(IMovieService storage) => this.storage = storage;
+        public MoviesController(IMovieService service) => this._service = service;
 
         /// <summary>
         /// Retrieves all movies.
@@ -19,7 +19,7 @@ namespace WebApp.Controllers
         /// <returns>All Movies.</returns>
         /// <response code="200">Returns all Movies.</response>
         [HttpGet]
-        public IEnumerable<Movie> GetAllMovies() => storage.GetAll();
+        public IEnumerable<Movie> GetAllMovies() => _service.GetAll();
 
         /// <summary>
         /// Get a specific movie by ID.
@@ -31,7 +31,7 @@ namespace WebApp.Controllers
         [HttpGet("{id}")]
         public IActionResult GetMovie(int id)
         {
-            var movie = storage.Get(id);
+            var movie = _service.Get(id);
             return movie == null ? NotFound() : Ok(movie);
         }
 
@@ -43,7 +43,7 @@ namespace WebApp.Controllers
         /// <response code="201">The movie is successfully added.</response>
         /// <response code="400">The movie data is invalid.</response>
         [HttpPost]
-        public IActionResult CreateMovie(Movie movie) => CreatedAtAction(nameof(GetMovie), new { id = movie.Id }, storage.Create(movie));
+        public IActionResult CreateMovie(Movie movie) => CreatedAtAction(nameof(GetMovie), new { id = movie.Id }, _service.Create(movie));
 
         /// <summary>
         /// Updates an existing movie.
@@ -56,7 +56,7 @@ namespace WebApp.Controllers
         [HttpPut("{id}")]
         public IActionResult UpdateMovie(int id, Movie updatedMovie)
         {
-            var result = storage.Update(id, updatedMovie);
+            var result = _service.Update(id, updatedMovie);
             return result ? Ok(result) : NotFound();
         }
 
@@ -68,6 +68,6 @@ namespace WebApp.Controllers
         /// <response code="204">The movie is successfully deleted.</response>
         /// <response code="404">The movie is not found.</response>
         [HttpDelete("{id}")]
-        public IActionResult DeleteMovie(int id) => storage.Delete(id) ? NotFound() : NoContent();
+        public IActionResult DeleteMovie(int id) => _service.Delete(id) ? NoContent() : NotFound();
     }
 }

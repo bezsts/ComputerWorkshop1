@@ -32,7 +32,6 @@ namespace ApiDomain.Services
 
             dataStorage.Users[userIndex].Name = updatedUser.Name;
             dataStorage.Users[userIndex].Email = updatedUser.Email;
-            dataStorage.Users[userIndex].Password = updatedUser.Password;
             dataStorage.Users[userIndex].WatchedMovies = updatedUser.WatchedMovies;
             dataStorage.SaveUsersData();
             return true;
