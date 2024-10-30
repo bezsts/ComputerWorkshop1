@@ -11,7 +11,7 @@ namespace WebApp.Controllers
     {
         private readonly IMovieService _service;
 
-        public MoviesController(IMovieService service) => this._service = service;
+        public MoviesController(IMovieService service) => _service = service;
 
         /// <summary>
         /// Retrieves all movies.

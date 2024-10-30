@@ -11,7 +11,7 @@ namespace WebApp.Controllers
     {
         private readonly IUserService _service;
 
-        public UsersController(IUserService service) => this._service = service;
+        public UsersController(IUserService service) => _service = service;
 
         /// <summary>
         /// Retrieves all users.
