@@ -1,5 +1,5 @@
 ﻿using ApiDomain.Models;
-using ApiDomain.Services;
+using ApiDomain.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Controllers
@@ -9,9 +9,9 @@ namespace WebApp.Controllers
     [Produces("application/json")]
     public class UsersController : Controller
     {
-        private readonly IUserService _service;
+        private readonly IUserRepository _service;
 
-        public UsersController(IUserService service) => _service = service;
+        public UsersController(IUserRepository service) => _service = service;
 
         /// <summary>
         /// Retrieves all users.

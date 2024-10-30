@@ -1,8 +1,8 @@
 ﻿using ApiDomain.Models;
 
-namespace ApiDomain.Services
+namespace ApiDomain.Repositories
 {
-    public interface IMovieService
+    public interface IMovieRepository
     {
         IEnumerable<Movie> GetAll();
         Movie? Get(int id);

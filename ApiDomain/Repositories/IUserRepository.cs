@@ -1,8 +1,8 @@
 ﻿using ApiDomain.Models;
 
-namespace ApiDomain.Services
+namespace ApiDomain.Repositories
 {
-    public interface IUserService
+    public interface IUserRepository
     {
         IEnumerable<User> GetAll();
         User? Get(int Id);

@@ -1,13 +1,13 @@
 ﻿using ApiDomain.Models;
 using ApiDomain.Storage;
 
-namespace ApiDomain.Services
+namespace ApiDomain.Repositories
 {
-    internal class UserService : IUserService
+    internal class UserRepository : IUserRepository
     {
         private readonly IDataStorage dataStorage;
 
-        public UserService(IDataStorage dataStorage) => this.dataStorage = dataStorage;
+        public UserRepository(IDataStorage dataStorage) => this.dataStorage = dataStorage;
 
         public IEnumerable<User> GetAll() => dataStorage.Users;
 

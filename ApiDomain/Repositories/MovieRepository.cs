@@ -1,13 +1,13 @@
 ﻿using ApiDomain.Storage;
 using ApiDomain.Models;
 
-namespace ApiDomain.Services
+namespace ApiDomain.Repositories
 {
-    internal class MovieService : IMovieService
+    internal class MovieRepository : IMovieRepository
     {
         private readonly IDataStorage dataStorage;
 
-        public MovieService(IDataStorage dataStorage) => this.dataStorage = dataStorage;
+        public MovieRepository(IDataStorage dataStorage) => this.dataStorage = dataStorage;
 
         public IEnumerable<Movie> GetAll() => dataStorage.Movies;
 

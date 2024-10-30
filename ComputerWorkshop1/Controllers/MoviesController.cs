@@ -1,5 +1,5 @@
 ﻿using ApiDomain.Models;
-using ApiDomain.Services;
+using ApiDomain.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Controllers
@@ -9,9 +9,9 @@ namespace WebApp.Controllers
     [Produces("application/json")]
     public class MoviesController : Controller
     {
-        private readonly IMovieService _service;
+        private readonly IMovieRepository _service;
 
-        public MoviesController(IMovieService service) => _service = service;
+        public MoviesController(IMovieRepository service) => _service = service;
 
         /// <summary>
         /// Retrieves all movies.
